@@ -13,6 +13,7 @@
 @end
 
 @implementation AddViewController
+@synthesize delegate;
 
 -(IBAction)onChange:(id)sender
 {

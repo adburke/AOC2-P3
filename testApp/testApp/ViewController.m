@@ -15,7 +15,7 @@
 
 @implementation ViewController
 
--(void)DidSave:(NSString *)eventName
+-(void)DidSave:(NSString *)eventName date:(NSString *)date
 {
     NSString *oldString = eventTextView.text;
     NSString *newString = [oldString stringByAppendingFormat:@"/n%@", eventName];

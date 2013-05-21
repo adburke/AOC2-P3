@@ -11,7 +11,7 @@
 @protocol SaveEventDelegate <NSObject>
 
 @required
--(void)DidSave:(NSString*)eventName;
+-(void)DidSave:(NSString*)eventName date:(NSString*)date;
 
 @end
 
