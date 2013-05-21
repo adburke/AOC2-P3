@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 
-@interface AddViewController : ViewController
+@interface AddViewController : ViewController <UITextFieldDelegate>
+{
+    IBOutlet UIButton *saveBtn;
+    IBOutlet UIButton *closeKeybrd;
+    IBOutlet UITextField *addEventText;
+}
+
+-(IBAction)onClick:(id)sender;
 
 @end
