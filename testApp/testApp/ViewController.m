@@ -7,12 +7,26 @@
 //
 
 #import "ViewController.h"
+#import "AddViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+-(IBAction)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (button) {
+        if (button.tag == 0) {
+            AddViewController *addView = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+            if (addView) {
+                [self presentViewController:addView animated:TRUE completion:nil];
+            }
+        }
+    }
+}
 
 - (void)viewDidLoad
 {
