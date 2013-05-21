@@ -18,6 +18,8 @@
 		96645003174B1290003C119C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96645002174B1290003C119C /* Default-568h@2x.png */; };
 		96645006174B1290003C119C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96645005174B1290003C119C /* ViewController.m */; };
 		96645009174B1290003C119C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96645007174B1290003C119C /* ViewController.xib */; };
+		96D52C4F174BE33700994FF3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D52C4D174BE33700994FF3 /* AddViewController.m */; };
+		96D52C50174BE33700994FF3 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D52C4E174BE33700994FF3 /* AddViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		96645004174B1290003C119C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		96645005174B1290003C119C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96645008174B1290003C119C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		96D52C4C174BE33700994FF3 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		96D52C4D174BE33700994FF3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		96D52C4E174BE33700994FF3 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				96645005174B1290003C119C /* ViewController.m */,
 				96645007174B1290003C119C /* ViewController.xib */,
 				96644FF3174B1290003C119C /* Supporting Files */,
+				96D52C4C174BE33700994FF3 /* AddViewController.h */,
+				96D52C4D174BE33700994FF3 /* AddViewController.m */,
+				96D52C4E174BE33700994FF3 /* AddViewController.xib */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				96645001174B1290003C119C /* Default@2x.png in Resources */,
 				96645003174B1290003C119C /* Default-568h@2x.png in Resources */,
 				96645009174B1290003C119C /* ViewController.xib in Resources */,
+				96D52C50174BE33700994FF3 /* AddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				96644FF9174B1290003C119C /* main.m in Sources */,
 				96644FFD174B1290003C119C /* AppDelegate.m in Sources */,
 				96645006174B1290003C119C /* ViewController.m in Sources */,
+				96D52C4F174BE33700994FF3 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +310,7 @@
 				9664500E174B1290003C119C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
