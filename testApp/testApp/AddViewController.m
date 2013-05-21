@@ -14,6 +14,14 @@
 
 @implementation AddViewController
 
+-(IBAction)onChange:(id)sender
+{
+    datePicker = (UIDatePicker*)sender;
+    if (datePicker) {
+        NSDate *date = datePicker.date;
+    }
+}
+
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;
