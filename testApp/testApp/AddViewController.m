@@ -23,6 +23,7 @@
             [self dismissViewControllerAnimated:TRUE completion:nil];
         } else if (button.tag == 1) {
             NSLog(@"Close Keyboard Pressed");
+            [addEventText resignFirstResponder];
         }
     }
 }
