@@ -14,6 +14,19 @@
 
 @implementation AddViewController
 
+-(IBAction)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (button) {
+        if (button.tag == 0) {
+            NSLog(@"Save Event Pressed");
+            [self dismissViewControllerAnimated:TRUE completion:nil];
+        } else if (button.tag == 1) {
+            NSLog(@"Close Keyboard Pressed");
+        }
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
