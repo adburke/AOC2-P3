@@ -15,7 +15,7 @@
 
 @end
 
-@interface AddViewController : ViewController <UITextFieldDelegate>
+@interface AddViewController : UIViewController <UITextFieldDelegate>
 {
     id<SaveEventDelegate> delegate;
     

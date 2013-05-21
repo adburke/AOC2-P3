@@ -15,6 +15,7 @@
 @implementation AddViewController
 @synthesize delegate;
 
+
 -(IBAction)onChange:(id)sender
 {
     datePicker = (UIDatePicker*)sender;
@@ -29,6 +30,10 @@
     if (button) {
         if (button.tag == 0) {
             NSLog(@"Save Event Pressed");
+            if (delegate) {
+                NSDate *date = datePicker.date;
+                [delegate DidSave:addEventText.text date:[date description]];
+            }
             [self dismissViewControllerAnimated:TRUE completion:nil];
         } else if (button.tag == 1) {
             NSLog(@"Close Keyboard Pressed");
