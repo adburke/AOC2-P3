@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UITextView *eventTextView;
+    IBOutlet UIButton *addEvent;
+}
+
+-(IBAction)onClick:(id)sender;
 
 @end
