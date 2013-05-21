@@ -15,6 +15,14 @@
 
 @implementation ViewController
 
+-(void)DidSave:(NSString *)eventName
+{
+    NSString *oldString = eventTextView.text;
+    NSString *newString = [oldString stringByAppendingFormat:@"/n%@", eventName];
+    
+    eventTextView.text = newString;
+}
+
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;
@@ -22,6 +30,7 @@
         if (button.tag == 0) {
             AddViewController *addView = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
             if (addView) {
+                addView.delegate = self;
                 [self presentViewController:addView animated:TRUE completion:nil];
             }
         }

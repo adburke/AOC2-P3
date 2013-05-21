@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddViewController.h"
 
-@interface ViewController : UIViewController 
+@interface ViewController : UIViewController <SaveEventDelegate>
 {
     IBOutlet UITextView *eventTextView;
     IBOutlet UIButton *addEvent;

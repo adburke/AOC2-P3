@@ -10,6 +10,7 @@
 
 @protocol SaveEventDelegate <NSObject>
 
+@required
 -(void)DidSave:(NSString*)eventName;
 
 @end
@@ -26,4 +27,7 @@
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onChange:(id)sender;
+
+@property (strong) id<SaveEventDelegate> delegate;
+
 @end
