@@ -18,9 +18,13 @@
 -(void)DidSave:(NSString *)eventName date:(NSString *)date
 {
     NSString *oldString = eventTextView.text;
-    NSString *newString = [oldString stringByAppendingFormat:@"/n%@", eventName];
-    
-    eventTextView.text = newString;
+    if ([oldString isEqual: @""]) {
+        NSString *newString = [oldString stringByAppendingFormat:@"%@ -- %@", eventName, date];
+        eventTextView.text = newString;
+    } else {
+        NSString *newString = [oldString stringByAppendingFormat:@"\n%@ -- %@", eventName, date];
+        eventTextView.text = newString;
+    }
 }
 
 -(IBAction)onClick:(id)sender
@@ -30,7 +34,8 @@
         if (button.tag == 0) {
             AddViewController *addView = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
             if (addView) {
-                addView.delegate = self;
+                // video showed xxx.delegate = self; which gives a warning found it needs to be (id)self
+                addView.delegate = (id)self;
                 [self presentViewController:addView animated:TRUE completion:nil];
             }
         }

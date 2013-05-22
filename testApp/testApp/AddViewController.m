@@ -18,10 +18,7 @@
 
 -(IBAction)onChange:(id)sender
 {
-    datePicker = (UIDatePicker*)sender;
-    if (datePicker) {
-        NSDate *date = datePicker.date;
-    }
+
 }
 
 -(IBAction)onClick:(id)sender
@@ -46,6 +43,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        delegate = nil;
         // Custom initialization
     }
     return self;
