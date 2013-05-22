@@ -24,10 +24,16 @@
         if (button.tag == 0) {
             NSLog(@"Save Event Pressed");
             if (delegate) {
-                // Check for blank event name
-                // If blank, alert view is shown with error
-                if ([addEventText.text isEqual:@""]) {
-                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Invalid" message:@"Please input an event name!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                // Check for blank event name and past dates
+                // If blank or past date, alert view is shown with error
+                if ([addEventText.text isEqual:@""]) { // Checks that the event name is not blank
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Invalid Event Name" message:@"Please input an event name!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                    if (alertView)
+                    {
+                        [alertView show];
+                    }
+                } else if ([datePicker.date timeIntervalSinceNow] < 0) { // Checks that the date is in the future
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Invalid Date" message:@"Please select a future date!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                     if (alertView)
                     {
                         [alertView show];
