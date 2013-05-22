@@ -15,8 +15,11 @@
 
 @implementation ViewController
 
+// Implementation of SaveEventDelegate method DidSave located in AddViewController
 -(void)DidSave:(NSString *)eventName date:(NSString *)date
 {
+    // Checks for text that is already in the text view
+    // Appends text and creates a new line if needed
     NSString *oldString = eventTextView.text;
     if ([oldString isEqual: @""]) {
         NSString *newString = [oldString stringByAppendingFormat:@"%@ -- %@", eventName, date];
@@ -27,6 +30,9 @@
     }
 }
 
+// Add Event button
+// Initializes and launches the AddViewController view
+// Defines itself as the target of the SaveEventDelegate
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;

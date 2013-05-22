@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 
+// Event delegate that passes data from second to first view
 @protocol SaveEventDelegate <NSObject>
 
 @required
+// Required method to implement delegate
 -(void)DidSave:(NSString*)eventName date:(NSString*)date;
 
 @end
@@ -25,8 +27,8 @@
     IBOutlet UIDatePicker *datePicker;
 }
 
+// Controls both save and close keyboard buttons
 -(IBAction)onClick:(id)sender;
--(IBAction)onChange:(id)sender;
 
 @property (strong) id<SaveEventDelegate> delegate;
 
