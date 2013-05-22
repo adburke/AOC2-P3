@@ -28,8 +28,10 @@
         if (button.tag == 0) {
             NSLog(@"Save Event Pressed");
             if (delegate) {
-                NSDate *date = datePicker.date;
-                [delegate DidSave:addEventText.text date:[date description]];
+                NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                [dateFormat setDateFormat:@"MM.d.yyyy HH:mm a zz"];
+                NSString *dateString = [[NSString alloc] initWithString:[dateFormat stringFromDate:datePicker.date]];
+                [delegate DidSave:addEventText.text date:dateString];
             }
             [self dismissViewControllerAnimated:TRUE completion:nil];
         } else if (button.tag == 1) {
