@@ -22,10 +22,10 @@
     // Appends text and creates a new line if needed
     NSString *oldString = eventTextView.text;
     if ([oldString isEqual: @""]) {
-        NSString *newString = [oldString stringByAppendingFormat:@"%@ -- %@", eventName, date];
+        NSString *newString = [oldString stringByAppendingFormat:@"%@\n%@", eventName, date];
         eventTextView.text = newString;
     } else {
-        NSString *newString = [oldString stringByAppendingFormat:@"\n%@ -- %@", eventName, date];
+        NSString *newString = [oldString stringByAppendingFormat:@"\n\n%@\n%@", eventName, date];
         eventTextView.text = newString;
     }
 }
